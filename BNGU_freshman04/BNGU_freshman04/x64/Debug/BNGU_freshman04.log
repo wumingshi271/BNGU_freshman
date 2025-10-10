@@ -1,0 +1,41 @@
+﻿  BNGU_freshman04.cpp
+D:\code\projects\BNGU_freshman04\BNGU_freshman04\BNGU_freshman04.cpp(65,17): warning C4305: “初始化”: 从“double”到“float”截断
+D:\code\projects\BNGU_freshman04\BNGU_freshman04\BNGU_freshman04.cpp(66,18): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103): warning C4244: “参数”: 从“_Ty”转换到“_Tp”，可能丢失数据
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103): warning C4244:         ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103): warning C4244:         and
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103): warning C4244:             _Tp=float
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103): warning C4244:         ]
+  (编译源文件“BNGU_freshman04.cpp”)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xmemory(732,103):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\code\projects\BNGU_freshman04\BNGU_freshman04\BNGU_freshman04.cpp(70,19):
+          查看对正在编译的函数 模板 实例化“void std::vector<cv::Point3f,std::allocator<cv::Point3f>>::emplace_back<float,float,int>(float &&,float &&,int &&)”的引用
+              D:\code\projects\BNGU_freshman04\BNGU_freshman04\BNGU_freshman04.cpp(70,31):
+              请参阅 "main" 中对 "std::vector<cv::Point3f,std::allocator<cv::Point3f>>::emplace_back" 的第一个引用
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vector(924,24):
+          查看对正在编译的函数 模板 实例化“_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_one_at_back<float,float,int>(float &&,float &&,int &&)”的引用
+          with
+          [
+              _Ty=cv::Point3f
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vector(845,20):
+          查看对正在编译的函数 模板 实例化“_Ty &std::vector<_Ty,std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<float,float,int>(float &&,float &&,int &&)”的引用
+          with
+          [
+              _Ty=cv::Point3f
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vector(863,27):
+          查看对正在编译的函数 模板 实例化“void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,float,int>(_Alloc &,_Objty *const ,float &&,float &&,int &&)”的引用
+          with
+          [
+              _Alloc=std::allocator<cv::Point3f>,
+              _Ty=cv::Point3_<float>,
+              _Objty=cv::Point3_<float>
+          ]
+  
+  BNGU_freshman04.vcxproj -> D:\code\projects\BNGU_freshman04\x64\Debug\BNGU_freshman04.exe
