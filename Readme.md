@@ -51,9 +51,38 @@
 
 该视频由于虚拟机的原因，无法使用电脑的摄像头，因此前两个题目是在 **Ubantu** 下运行的。而后两道题目由于需要使用摄像头，是在 **Windows** 下运行的
 
-## 运行建议
+## 三. 运行建议
 
 * 准备一个摄像头，并且要测定好它的内参（第四题可以在源码中修改内参）
+
+## 四. 各题目分别的源码仓库（里面有python和C++版本）
+
+### Python
+
+01：颜色分割 							[https://github.com/wumingshi271/BNGU_freshman01](https://github.com/wumingshi271/BNGU_freshman01)
+
+
+02：最小框选与多边形拟合 				[https://github.com/wumingshi271/BNGU_freshman02](https://github.com/wumingshi271/BNGU_freshman02)
+
+
+03：最小框选与多边形拟合（选做题）	[https://github.com/wumingshi271/BNGU_freshman03](https://github.com/wumingshi271/BNGU_freshman03)
+
+
+04：物体位姿演算与solvePnP实战		[https://github.com/wumingshi271/BNGU_freshman_04](https://github.com/wumingshi271/BNGU_freshman_04)
+
+### C++
+
+01：颜色分割 							[https://github.com/wumingshi271/BNGU_freshman01_C-_version](https://github.com/wumingshi271/BNGU_freshman01_C-_version)
+
+
+02：最小框选与多边形拟合 				[https://github.com/wumingshi271/BNGU_freshman02_C-_version](https://github.com/wumingshi271/BNGU_freshman02_C-_version)
+
+
+03：最小框选与多边形拟合（选做题）	[https://github.com/wumingshi271/BNGU_freshman03_C-_version](https://github.com/wumingshi271/BNGU_freshman03_C-_version)
+
+
+04：物体位姿演算与solvePnP实战		[https://github.com/wumingshi271/BNGU_freshman_04_C-_version](https://github.com/wumingshi271/BNGU_freshman_04_C-_version)
+
 
 ## 最后寄语
 
