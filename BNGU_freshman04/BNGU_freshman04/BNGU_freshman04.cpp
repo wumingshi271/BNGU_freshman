@@ -1,10 +1,8 @@
-﻿#include <opencv2/opencv.hpp>
-#include <vector>
-#include <algorithm>
+﻿#include <algorithm>
 #include <cmath>
-
 #include <iostream>
-#include<opencv2/opencv.hpp>
+#include <vector>
+#include <opencv2/opencv.hpp>
 
 using namespace cv;
 using namespace std;
@@ -66,11 +64,13 @@ int main() {
     float height = 0.15;
 
     // 定义矩形在世界坐标系中的4个角点坐标（3D坐标）
-    vector<Point3f> object_points;
-    object_points.emplace_back(-width / 2, -height / 2, 0);  // 左下
-    object_points.emplace_back(width / 2, -height / 2, 0);   // 右下
-    object_points.emplace_back(width / 2, height / 2, 0);    // 右上
-    object_points.emplace_back(-width / 2, height / 2, 0);   // 左上
+    vector<Point3f> object_points = {
+        {-width/2, -height/2, 0},// 左下
+        {width / 2, -height / 2, 0},// 右下
+        {width / 2, height / 2, 0},// 右上
+        {-width / 2, height / 2, 0},// 左上
+    };
+       
 
     Mat frame, gray, blurred, edges, img;
     while (true) {
@@ -83,6 +83,7 @@ int main() {
 
         // 转换为灰度图像
         cvtColor(frame, gray, COLOR_BGR2GRAY);
+        
 
         // 预处理
         GaussianBlur(gray, blurred, Size(5, 5), 0);
@@ -139,9 +140,7 @@ int main() {
                     for (int i = 0; i < 4; ++i) {
                         circle(img, Point((int)image_points[i].x, (int)image_points[i].y),
                             5, Scalar(255, 0, 0), -1);
-                        putText(img, to_string(i),
-                            Point((int)image_points[i].x, (int)image_points[i].y),
-                            FONT_HERSHEY_SIMPLEX, 0.7, Scalar(255, 255, 255), 2);
+                        
                     }
 
                     // 使用solvePnP估计姿态
@@ -152,11 +151,12 @@ int main() {
                     if (success) {
                         // 定义坐标系的3D点（在矩形中心）
                         float axis_length = min(width, height) / 2;
-                        vector<Point3f> axis_points;
-                        axis_points.emplace_back(0, 0, 0);                  // 原点
-                        axis_points.emplace_back(axis_length, 0, 0);         // X轴
-                        axis_points.emplace_back(0, axis_length, 0);         // Y轴
-                        axis_points.emplace_back(0, 0, -axis_length);        // Z轴（指向相机）
+                        vector<Point3f> axis_points{
+                            {0, 0, 0},                 // 原点
+                        {axis_length, 0, 0},       // X轴
+                        {0, axis_length, 0},         // Y轴
+                        {0, 0, axis_length},        // Z轴
+                        };
 
                         // 将3D点投影到2D图像平面
                         vector<Point2f> projected_points;
@@ -179,11 +179,6 @@ int main() {
                         putText(img, "Y", y_axis, FONT_HERSHEY_SIMPLEX, 0.7, Scalar(0, 255, 0), 2);
                         putText(img, "Z", z_axis, FONT_HERSHEY_SIMPLEX, 0.7, Scalar(255, 0, 0), 2);
 
-                        // 显示距离信息
-                        double distance = norm(tvec);  // 向量的模长
-                        putText(img, "Distance: " + to_string(distance).substr(0, 5) + "m",
-                            Point(10, 30), FONT_HERSHEY_SIMPLEX, 0.7, Scalar(255, 255, 255), 2);
-
                         rectangle_found = true;
                         break;  // 找到一个有效的矩形就跳出循环
                     }
@@ -202,6 +197,6 @@ int main() {
 }
 
     capture.release();
-    destroyAllWindows();
+    cv::destroyAllWindows();
     return 0;
 }
