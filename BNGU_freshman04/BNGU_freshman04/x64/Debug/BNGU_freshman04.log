@@ -1,4 +1,4 @@
 ﻿  BNGU_freshman04.cpp
-D:\code\projects\BNGU_freshman04\BNGU_freshman04\BNGU_freshman04.cpp(63,17): warning C4305: “初始化”: 从“double”到“float”截断
-D:\code\projects\BNGU_freshman04\BNGU_freshman04\BNGU_freshman04.cpp(64,18): warning C4305: “初始化”: 从“double”到“float”截断
+D:\code\projects\BNGU_freshman04\BNGU_freshman04\BNGU_freshman04.cpp(62,17): warning C4305: “初始化”: 从“double”到“float”截断
+D:\code\projects\BNGU_freshman04\BNGU_freshman04\BNGU_freshman04.cpp(63,18): warning C4305: “初始化”: 从“double”到“float”截断
   BNGU_freshman04.vcxproj -> D:\code\projects\BNGU_freshman04\x64\Debug\BNGU_freshman04.exe
