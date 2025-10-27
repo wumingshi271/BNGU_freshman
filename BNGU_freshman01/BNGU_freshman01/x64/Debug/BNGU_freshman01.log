@@ -1,2 +1,3 @@
-﻿  BNGU_freshman01.cpp
-  BNGU_freshman01.vcxproj -> D:\code\projects\BNGU_freshman01\x64\Debug\BNGU_freshman01.exe
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: 中间目录(x64\Debug\)包含从另一个项目(BNGU_freshman01.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  BNGU_freshman01.cpp
+  BNGU_freshman01.vcxproj -> D:\code\projects\BNGU_freshman01\x64\Debug\BNGU_freshman01_C++_version.exe
