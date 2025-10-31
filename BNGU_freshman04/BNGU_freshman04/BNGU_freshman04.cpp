@@ -16,7 +16,7 @@ vector<Point2f> orderPoints(const vector<Point2f>& pts)
 {
     vector<Point2f> rect(4);
 
-    // 如果不满足点的数量，返回原集合
+    // 如果不满足点的数量，返回空向量
     if (pts.size() != 4)
     {
         return rect;
@@ -76,9 +76,14 @@ int main()
     }
 
     // 设置相机内参
+    /*
+    * 9.902286601211113e+02	0	6.350540514472938e+02
+0	9.921817256222492e+02	3.556105429175236e+02
+0	0	1
+    * */
     Mat cameraMatrix = (Mat_<double>(3, 3) <<
-        1000, 0, 640,
-        0, 1000, 360,
+        990.2877, 0, 635.0541,
+        0, 992.1817, 355.6105,
         0, 0, 1);
 
     // 畸变参数，假设没有畸变
@@ -113,7 +118,7 @@ int main()
 
         // 二值化处理
         Mat binary;
-        threshold(gray, binary, 50, 255, THRESH_BINARY_INV | THRESH_OTSU);
+        threshold(gray, binary, 50, 255, THRESH_BINARY_INV);
 
         // 预处理
         GaussianBlur(binary, blurred, Size(5, 5), 0);
